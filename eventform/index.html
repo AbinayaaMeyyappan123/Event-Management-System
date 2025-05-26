@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: gradientBG 15s ease infinite;
+            background: linear-gradient(-45deg, #f0f8ff, #d8bfd8, #e6e6fa, #ffe4e1);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h2 {
+            color: #4b0082;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #ffffffcc;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            backdrop-filter: blur(6px);
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #4b0082;
+            outline: none;
+        }
+
+        button {
+            background-color: #4b0082;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #6a0dad;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <form action="submit.php" method="POST">
+        <h2>Event Registration Form</h2>
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label>Event:</label>
+        <input type="text" name="event" required>
+
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Venue:</label>
+        <input type="text" name="venue" required>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
